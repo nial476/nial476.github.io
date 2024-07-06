@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Barlow Condensed", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(3, 3, 3);
+}
+
+.content {
+    display: flex;
+    height: 100%;
+}
+
+.fixed_left {
+    display: flex;
+    flex-direction: column;
+    padding: 5% 2%;
+    width: 50%;
+    height: 100vh;
+    position: sticky;
+}
+
+.intro {
+    height: 25vh;
+}
+
+
+#name {
+    padding-bottom: 20px;
+}
+
+#grad {
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+#intro_details {
+    color: grey;
+}
+
+nav {
+    padding-top: 10vh;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(148, 148, 149);
+    transition: color 0.3s ease;
+}
+
+.highlight:target {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+.dash {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: grey;
+    transition: width 0.3s ease, background-color 0.3s ease;
+    vertical-align: middle;
+}
+a:hover .dash{
+    width: 60px;
+    background-color: white;
+}
+
+
+#picture {
+    /* position: absolute; */
+    /* left: 30px; */
+    /* bottom: 150px; */
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#github_pic {
+    width: 150px;
+    height: 150px;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: filter ease 0.5s;
+}
+
+.project:hover .project_right{
+    filter: brightness(70%);
+}
+
+.project_right {
+    position: relative;
+    background-color: grey;
+    /* height: 50px; */
+    transition: filter ease 0.5s, transform ease 0.5s;
+}
+
+
+.project:hover .project_right:hover {
+    filter: brightness(120%);
+    transform: scale(1.1);
+}
+
+.sec {
+    margin-top: 20px;
+}
+
+/* Skills section */
+
+.list_skills {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.one_skill {
+    background-color: maroon;
+    border-radius: 10px;
+    padding: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.os_img {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.skill_head {
+    display: flex;
+    gap: 10px;
+    /* justify-content: center; */
+}
+
+.skill_os {
+    margin-left: 3px;
+}
