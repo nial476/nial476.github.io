@@ -8,7 +8,7 @@
 body {
     font-family: "Barlow Condensed", sans-serif;
     color: rgb(255, 255, 255);
-    background-color: rgb(3, 3, 3);
+    background-color: rgb(21, 21, 21);
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
@@ -39,7 +39,7 @@ body {
 
 p a {
     text-decoration: underline;
-    color: white;
+    text-underline-offset: 4px;
 }
 
 .intro {
@@ -155,8 +155,8 @@ section {
     padding: 10px 20px 20px 20px;
     color: rgb(148, 148, 149);
 }
-/* Skills section */
 
+/* Skills section */
 
 .one_skill {
     display: flex;
@@ -166,8 +166,8 @@ section {
 }
 
 .one_skill li{
-    background-color: #011638;
-    color: #94daff;
+    background-color: rgb(17, 17, 17);
+    color: rgb(155, 149, 149);
     border-radius: 10px;
     padding: 5px;
     margin-left: 3px;
@@ -176,8 +176,7 @@ section {
 
 .os_img {
     width: 50px;
-    height: 50px;
-    background-color: white;
+    height: 30px;
     border-radius: 10px;
     margin-left: 10px;
 }
@@ -195,4 +194,8 @@ section {
 .skill_body {
     /* overflow-x: auto; */
     height: auto;
+}
+
+#Skills .project_right {
+    background-color: rgb(21, 21, 21);
 }
