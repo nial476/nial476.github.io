@@ -16,7 +16,8 @@ body {
 
 .content {
     display: flex;
-    height: 100%;
+    /* position: relative;
+    min-height: 100vh; */
 }
 
 .fixed_left {
@@ -25,11 +26,24 @@ body {
     padding: 5% 2%;
     width: 50%;
     height: 100vh;
+    top: 0;
     position: sticky;
+    /* overflow-y: auto; */
+    box-sizing: border-box;
+}
+
+.scroll_right {
+    flex-grow: 1;
+    /* overflow-y: auto; */
+}
+
+p a {
+    text-decoration: underline;
+    color: white;
 }
 
 .intro {
-    height: 25vh;
+    height: auto;
 }
 
 
@@ -112,12 +126,12 @@ a:hover .dash{
 }
 
 .project_right {
-    position: relative;
+    /* position: relative; */
     background-color: #202022;
     transition: filter ease 0.5s, transform ease 0.5s;
     width: 500px;
     height: auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 
@@ -126,11 +140,11 @@ a:hover .dash{
     transform: scale(1.1);
 }
 
-.sec {
-    margin-top: 20px;
+section {
+    margin-top: 80px;
 }
 
-.project_name {
+.project_name, .skill_os {
     padding: 20px 20px 10px 20px;
     text-shadow: rgb(148, 148, 149);
     font-weight: 300;
