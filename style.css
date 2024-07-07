@@ -9,6 +9,9 @@ body {
     font-family: "Barlow Condensed", sans-serif;
     color: rgb(255, 255, 255);
     background-color: rgb(3, 3, 3);
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content {
@@ -86,9 +89,6 @@ a:hover .dash{
 
 
 #picture {
-    /* position: absolute; */
-    /* left: 30px; */
-    /* bottom: 150px; */
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -99,6 +99,7 @@ a:hover .dash{
     height: 150px;
 }
 
+/* Project section */
 .project {
     display: flex;
     flex-direction: column;
@@ -112,9 +113,11 @@ a:hover .dash{
 
 .project_right {
     position: relative;
-    background-color: grey;
-    /* height: 50px; */
+    background-color: #202022;
     transition: filter ease 0.5s, transform ease 0.5s;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
 }
 
 
@@ -127,18 +130,32 @@ a:hover .dash{
     margin-top: 20px;
 }
 
+.project_name {
+    padding: 20px 20px 10px 20px;
+    text-shadow: rgb(148, 148, 149);
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.project_details {
+    padding: 10px 20px 20px 20px;
+    color: rgb(148, 148, 149);
+}
 /* Skills section */
 
-.list_skills {
+
+.one_skill {
     display: flex;
     margin-top: 10px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
-.one_skill {
-    background-color: maroon;
+.one_skill li{
+    background-color: #011638;
+    color: #94daff;
     border-radius: 10px;
-    padding: 2px;
+    padding: 5px;
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -149,15 +166,19 @@ a:hover .dash{
     background-color: white;
     border-radius: 10px;
     margin-left: 10px;
-    margin-top: 5px;
 }
 
 .skill_head {
     display: flex;
     gap: 10px;
-    /* justify-content: center; */
+    align-items: center;
 }
 
 .skill_os {
     margin-left: 3px;
+}
+
+.skill_body {
+    /* overflow-x: auto; */
+    height: auto;
 }
