@@ -1,2 +1,1 @@
-# nial476.github.io
-Portfolio Website
+This repo contains the code for my Protfolio Website https://nial476.github.io/
