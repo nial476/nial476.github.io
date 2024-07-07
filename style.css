@@ -121,9 +121,36 @@ a:hover .dash{
 }
 
 #github_pic {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
+}
+
+#linkedin_pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+#email_pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.contact {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact_each {
+    display: flex;
+}
+
+.contact_text {
+    margin-top: 3px;
+    margin-left: 5px;
 }
 
 /* Project section */
@@ -209,6 +236,28 @@ section {
     height: auto;
 }
 
-#Skills .project_right {
-    background-color: rgb(21, 21, 21);
+
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 500px;
+    transition: filter ease 0.5s;
+}
+
+.skill:hover .skill_right{
+    filter: brightness(50%);
+}
+
+.skill_right {
+    /* background-color:  rgb(21, 21, 21); */
+    transition: filter ease 0.5s, transform ease 0.5s;
+    height: auto;
+}
+
+
+.skill:hover .skill_right:hover {
+    filter: brightness(150%);
+    transform: scale(1.1);
 }
