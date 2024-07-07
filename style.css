@@ -183,7 +183,7 @@ a:hover .dash{
     transform: scale(1.1);
 }
 
-.project:hover .project_right:active {
+.project:active .project_right:active {
     filter: brightness(120%);
     transform: scale(1.1);
 }
