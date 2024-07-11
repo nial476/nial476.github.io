@@ -96,7 +96,8 @@ a {
     color: white;
 }
 
-a:hover {
+
+.active, a:hover {
     color: white;
 }
 
@@ -110,7 +111,7 @@ a:hover {
     transition: width 0.3s ease, background-color 0.3s ease;
     vertical-align: middle;
 }
-a:hover .dash{
+a:hover .dash, .active .dash{
     width: 60px;
     background-color: white;
 }
@@ -178,7 +179,7 @@ a:hover .dash{
 }
 
 
-.project:hover .project_right:hover, .project:active .project_right:active {
+.project:hover .project_right:hover {
     filter: brightness(120%);
     transform: scale(1.1);
 }

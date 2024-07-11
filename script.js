@@ -1,5 +1,18 @@
-let body = document.querySelector('body')
-document.addEventListener('mousemove', (e) => {
-    body.style.backgroundPositionX = e.pageX/-4 + 'px';
-    body.style.backgroundPositionY = e.pageY/-4 + 'px';
+const navLinkEls = document.querySelectorAll('.highlight');
+const sectionEls = document.querySelectorAll('section'); 
+
+let currentSection = 'Projects'
+window.addEventListener('scroll', () => {
+    sectionEls.forEach(sectionEl => {
+        if (window.scrollY >= sectionEl.offsetTop) {
+            currentSection = sectionEl.id;
+        }
+    })
+    // console.log(currentSection)
+    navLinkEls.forEach(navLinkEl => {
+        if (navLinkEl.href.includes(currentSection)) {
+            document.querySelector('.active').classList.remove('active');
+            navLinkEl.classList.add('active')
+        }
+    })
 })
