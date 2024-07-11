@@ -29,7 +29,7 @@ body {
     left: 50%;
     top: 50%;
     translate: -50% -50%;
-    position: absolute;
+    position: fixed;
     background: radial-gradient(rgba(255, 255, 255, 0.05), transparent 70%);
 }
 
@@ -49,12 +49,13 @@ body {
     position: sticky;
     justify-content: space-between;
     /* overflow-y: auto; */
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .scroll_right {
     flex-grow: 1;
     font-family: "Roboto", sans-serif;
+    margin-bottom: 200px;
     /* overflow-y: auto; */
 }
 
@@ -200,12 +201,19 @@ a:hover .dash, .active .dash{
 .project:hover .project_right:hover {
     filter: brightness(120%);
     transform: scale(1.1);
+    z-index: 9999;
 }
 
 section {
     margin-top: 80px;
 }
 
+/* Experience Section */
+#Experience .project .project_right {
+    display: flex;
+}
+
+/* Skills Section */
 .project_name, .skill_os {
     padding: 20px 20px 10px 20px;
     font-weight: 300;
@@ -227,7 +235,7 @@ section {
 }
 
 .one_skill li{
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(0, 0, 0);
     color: rgb(155, 149, 149);
     border-radius: 10px;
     padding: 5px;

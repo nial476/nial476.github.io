@@ -4,7 +4,7 @@ const sectionEls = document.querySelectorAll('section');
 let currentSection = 'Projects';
 window.addEventListener('scroll', () => {
     sectionEls.forEach(sectionEl => {
-        if (window.scrollY >= sectionEl.offsetTop) {
+        if (window.scrollY  >= sectionEl.offsetTop) {
             currentSection = sectionEl.id;
         }
     })
@@ -29,5 +29,5 @@ const cursor = document.getElementById('blob')
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + window.scrollY + 'px';
+    cursor.style.top = e.clientY  + 'px';
 })
