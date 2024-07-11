@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-html {
-    scroll-behavior:smooth;
-}
-
 * {
     padding: 0;
     margin: 0;
+}
+
+html {
+    scroll-behavior:smooth;
 }
 
 body {
@@ -19,6 +19,18 @@ body {
     max-width: 1440px;
     margin-left: auto;
     margin-right: auto;
+}
+
+#blob {
+    /* background-color: white; */
+    height: 600px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    position: absolute;
+    background: radial-gradient(rgba(255, 255, 255, 0.05), transparent 70%);
 }
 
 .content {
@@ -162,11 +174,13 @@ a:hover .dash, .active .dash{
 
 /* Project section */
 .project {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 8px;
     width: 500px;
     transition: filter ease 0.5s;
+    /* z-index: 9999; */
 }
 
 .project:hover .project_right{
@@ -246,6 +260,7 @@ section {
 
 
 .skill {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 8px;
