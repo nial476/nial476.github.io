@@ -77,6 +77,10 @@ p a {
     margin-left: 20px;
 }
 
+.info_links {
+    display: inline;
+}
+
 #name {
     padding-bottom: 20px;
     letter-spacing: 3px;
@@ -179,7 +183,7 @@ a:hover .dash, .active .dash{
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 500px;
+    max-width: 550px;
     transition: filter ease 0.5s;
     /* z-index: 9999; */
 }
@@ -211,14 +215,17 @@ section {
 /* Experience Section */
 .exp {
     display: flex;
-    
 }
 
 .duration {
     font-weight: 100;
-    font-size: smaller;
-    align-items: center;
+    font-size: 12px;
+    justify-content: center;
+    width: 100px;
+    padding-right: 10px;
 }
+
+
 
 /* Skills Section */
 .project_name, .skill_os {
