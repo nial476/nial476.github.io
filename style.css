@@ -209,8 +209,15 @@ section {
 }
 
 /* Experience Section */
-#Experience .project .project_right {
+.exp {
     display: flex;
+    
+}
+
+.duration {
+    font-weight: 100;
+    font-size: smaller;
+    align-items: center;
 }
 
 /* Skills Section */
