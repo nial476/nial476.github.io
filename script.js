@@ -90,7 +90,7 @@ function removeActiveClass() {
 // }
 
 function handleTouch(event) {
-    event.preventDefault(); // Prevent default touch behavior
+    // event.preventDefault(); // Prevent default touch behavior
     const touch = event.touches[0]; // Get the first touch point
     findParentElements(touch.clientX, touch.clientY);
 }
