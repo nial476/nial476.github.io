@@ -99,8 +99,8 @@ function handleMouse(event) {
 }
 
 skillContainer.addEventListener('touchstart', handleTouch);
-// skillContainer.addEventListener('touchmove', handleTouch);
-// skillContainer.addEventListener('touchend', removeActiveClass);
+skillContainer.addEventListener('touchmove', handleTouch);
+skillContainer.addEventListener('touchend', removeActiveClass);
 
 skillContainer.addEventListener('mousemove', handleMouse);
-// skillContainer.addEventListener('mouseleave', removeActiveClass);
+skillContainer.addEventListener('mouseleave', removeActiveClrfass);
