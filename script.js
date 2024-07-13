@@ -34,14 +34,73 @@ document.addEventListener('mousemove', (e) => {
 
 // touchscreen thinge
 
-sk = document.querySelectorAll('.skill')
-skr = document.querySelectorAll('.skill_right')
+const skillContainer = document.querySelector('.skill');
 
-skr.forEach(skr_e => {
-    skr_e.addEventListener("pointerdown", e => {
-        document.querySelector('.skill_right').classList.remove('hover');
-        skr_e.classList.add('hover');
+function findParentElements(x, y) {
+    let element = document.elementFromPoint(x, y);
+    console.log(element)
+    document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.skill').forEach(el => el.classList.remove('hover'));
+    // removeActiveClass();
+    let skill = null;
+    let skillRight = null;
+    // if element.classList÷
+    while (element && (!skill || !skillRight)) {
+        if (element.classList.contains('skill_right')) {
+            skillRight = element;
+            skillRight.classList.add('hover');
+            // console.log(element)
+            console.log("added skr")
+        }
+        if (element.classList.contains('skill')) {
+            skill = element;
+            skill.classList.add('hover');
+            console.log(element)
+            console.log("added sk")
+            break; // We've found both, no need to go further
+        }
+        element = element.parentElement;
+    }
+    // console.log("pare")
+    // return { skill, skillRight };
+}
+
+// function removeActiveClass() {
+//     console.log("remove active")
+//     document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
+// }
+
+// function handleInteraction(x, y) {
+//     removeActiveClass();
     
-        sk.classList.add('hover');
-    })
-})
+//     const element = document.elementFromPoint(x, y);
+//     if (element) {
+//         const { skill, skillRight } = findParentElements(element);
+//         console.log("skill " + skill)
+//         console.log("skill " + skillRight)
+//         if (skill) {
+//             skill.classList.add('hover');
+//         }
+//         if (skillRight) {
+//             skillRight.classList.add('hover');
+//         }
+//     }
+// }
+
+function handleTouch(event) {
+    event.preventDefault(); // Prevent default touch behavior
+    const touch = event.touches[0]; // Get the first touch point
+    findParentElements(touch.clientX, touch.clientY);
+}
+function handleMouse(event) {
+    // console.log("handleMouse")
+    findParentElements(event.clientX, event.clientY);
+    // handleInteraction(event.clientX, event.clientY);
+}
+
+skillContainer.addEventListener('touchstart', handleTouch);
+// skillContainer.addEventListener('touchmove', handleTouch);
+// skillContainer.addEventListener('touchend', removeActiveClass);
+
+skillContainer.addEventListener('mousemove', handleMouse);
+// skillContainer.addEventListener('mouseleave', removeActiveClass);
