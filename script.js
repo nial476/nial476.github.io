@@ -31,3 +31,17 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY  + 'px';
 })
+
+// touchscreen thinge
+
+sk = document.querySelectorAll('.skill')
+skr = document.querySelectorAll('.skill_right')
+
+skr.forEach(skr_e => {
+    skr_e.addEventListener("pointerdown", e => {
+        document.querySelector('.skill_right').classList.remove('hover');
+        skr_e.classList.add('hover');
+    
+        sk.classList.add('hover');
+    })
+})
