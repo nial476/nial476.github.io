@@ -105,4 +105,4 @@ skillContainer.addEventListener('touchmove', handleTouch);
 skillContainer.addEventListener('touchend', removeActiveClass);
 
 skillContainer.addEventListener('mousemove', handleMouse);
-skillContainer.addEventListener('mouseleave', removeActiveClrfass);
+skillContainer.addEventListener('mouseleave', removeActiveClass);
