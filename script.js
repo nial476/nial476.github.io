@@ -65,10 +65,12 @@ function findParentElements(x, y) {
     // return { skill, skillRight };
 }
 
-// function removeActiveClass() {
-//     console.log("remove active")
-//     document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
-// }
+function removeActiveClass() {
+    console.log("remove active")
+    // document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.skill').forEach(el => el.classList.remove('hover'));
+}
 
 // function handleInteraction(x, y) {
 //     removeActiveClass();
