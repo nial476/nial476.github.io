@@ -4,7 +4,7 @@ const sectionEls = document.querySelectorAll('section');
 let currentSection = 'Projects';
 window.addEventListener('scroll', () => {
     sectionEls.forEach(sectionEl => {
-        if (window.scrollY  >= sectionEl.offsetTop) {
+        if ((window.scrollY + window.innerHeight/2) >= sectionEl.offsetTop) {
             currentSection = sectionEl.id;
         }
     })
@@ -25,20 +25,7 @@ document.addEventListener('mousemove', (e) => {
 })
 
 const containers = document.querySelectorAll('.touch');
-let touchTimeout;
 
-// function handleTouchStart(e) {
-//     container.classList.add('pop');
-//     e.target.classList.add('pop');
-//     clearTimeout(touchTimeout);
-// }
-
-// function handleTouchEnd(e) {
-//     touchTimeout = setTimeout(() => {
-//         container.classList.remove('pop');
-//         items.forEach(item => item.classList.remove('pop'));
-//     }, 300);
-// }
 document.addEventListener('touchend', () => {
     containers.forEach(container => {
         if (document.querySelectorAll('.pop').length > 0) {
