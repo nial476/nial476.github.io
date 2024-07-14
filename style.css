@@ -174,7 +174,7 @@ a:hover .dash, .active .dash{
 }
 
 /* Project section */
-.project {
+.project, .touch {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -184,11 +184,11 @@ a:hover .dash, .active .dash{
     /* z-index: 9999; */
 }
 
-.project:hover .project_right, .project.pop .project_right{
+.project:hover .project_right, .touch.pop .touch_right{
     filter: brightness(70%);
 }
 
-.project_right {
+.project_right, .touch_right {
     /* position: relative; */
     background-color: #202022;
     transition: filter ease 0.5s, transform ease 0.5s;
@@ -198,7 +198,7 @@ a:hover .dash, .active .dash{
 }
 
 
-.project:hover .project_right:hover, .project.pop .project_right.pop{
+.project:hover .project_right:hover, .touch.pop .touch_right.pop{
     filter: brightness(120%);
     transform: scale(1.1);
     z-index: 9999;

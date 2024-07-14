@@ -24,7 +24,7 @@ document.addEventListener('mousemove', (e) => {
     cursor.style.top = e.clientY  + 'px';
 })
 
-const containers = document.querySelectorAll('.project');
+const containers = document.querySelectorAll('.touch');
 let touchTimeout;
 
 // function handleTouchStart(e) {
@@ -48,7 +48,7 @@ document.addEventListener('touchend', () => {
             })
             console.log('first')
         }
-        const items = container.querySelectorAll('.project_right');
+        const items = container.querySelectorAll('.touch_right');
         items.forEach(item => {
             item.addEventListener('touchstart', e => {
                 container.classList.remove('pop');
