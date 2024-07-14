@@ -34,7 +34,7 @@ document.addEventListener('mousemove', (e) => {
 
 // touchscreen thinge
 
-const skillContainer = document.querySelector('.touch');
+const skillContainer = document.querySelectorAll('.touch');
 
 function findParentElements(x, y) {
     let element = document.elementFromPoint(x, y);
@@ -83,9 +83,11 @@ function handleMouse(event) {
     // handleInteraction(event.clientX, event.clientY);
 }
 
-skillContainer.addEventListener('touchstart', handleTouch);
-skillContainer.addEventListener('touchmove', handleTouch);
-skillContainer.addEventListener('touchend', removeActiveClass);
+skillContainer.forEach(sce => {
+    sce.addEventListener('touchstart', handleTouch);
+    sce.addEventListener('touchmove', handleTouch);
+    sce.addEventListener('touchend', removeActiveClass);
 
-skillContainer.addEventListener('mousemove', handleMouse);
-skillContainer.addEventListener('mouseleave', removeActiveClass);
+    sce.addEventListener('mousemove', handleMouse);
+    sce.addEventListener('mouseleave', removeActiveClass);
+})
