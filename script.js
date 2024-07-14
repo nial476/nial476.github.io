@@ -34,29 +34,29 @@ document.addEventListener('mousemove', (e) => {
 
 // touchscreen thinge
 
-const skillContainer = document.querySelector('.skill');
+const skillContainer = document.querySelector('.touch');
 
 function findParentElements(x, y) {
     let element = document.elementFromPoint(x, y);
     console.log(element)
-    document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
-    document.querySelectorAll('.skill').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.touch_right').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.touch').forEach(el => el.classList.remove('hover'));
     // removeActiveClass();
     let skill = null;
     let skillRight = null;
     // if element.classList÷
     while (element && (!skill || !skillRight)) {
-        if (element.classList.contains('skill_right')) {
+        if (element.classList.contains('touch_right')) {
             skillRight = element;
             skillRight.classList.add('hover');
             // console.log(element)
-            console.log("added skr")
+            // console.log("added skr")
         }
-        if (element.classList.contains('skill')) {
+        if (element.classList.contains('touch')) {
             skill = element;
             skill.classList.add('hover');
             console.log(element)
-            console.log("added sk")
+            // console.log("added sk")
             break; // We've found both, no need to go further
         }
         element = element.parentElement;
@@ -68,26 +68,9 @@ function findParentElements(x, y) {
 function removeActiveClass() {
     console.log("remove active")
     // document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
-    document.querySelectorAll('.skill_right').forEach(el => el.classList.remove('hover'));
-    document.querySelectorAll('.skill').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.touch_right').forEach(el => el.classList.remove('hover'));
+    document.querySelectorAll('.touch').forEach(el => el.classList.remove('hover'));
 }
-
-// function handleInteraction(x, y) {
-//     removeActiveClass();
-    
-//     const element = document.elementFromPoint(x, y);
-//     if (element) {
-//         const { skill, skillRight } = findParentElements(element);
-//         console.log("skill " + skill)
-//         console.log("skill " + skillRight)
-//         if (skill) {
-//             skill.classList.add('hover');
-//         }
-//         if (skillRight) {
-//             skillRight.classList.add('hover');
-//         }
-//     }
-// }
 
 function handleTouch(event) {
     // event.preventDefault(); // Prevent default touch behavior
