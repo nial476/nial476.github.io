@@ -174,7 +174,7 @@ a:hover .dash, .active .dash{
 }
 
 /* Project section */
-.project, .touch {
+.project {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -188,7 +188,7 @@ a:hover .dash, .active .dash{
     filter: brightness(70%);
 }
 
-.project_right, .touch_right {
+.project_right {
     /* position: relative; */
     background-color: #202022;
     transition: filter ease 0.5s, transform ease 0.5s;
