@@ -8,7 +8,6 @@ window.addEventListener('scroll', () => {
             currentSection = sectionEl.id;
         }
     })
-    // console.log(currentSection)
     navLinkEls.forEach(navLinkEl => {
         if (navLinkEl.href.includes(currentSection)) {
             document.querySelector('.active').classList.remove('active');
@@ -17,17 +16,44 @@ window.addEventListener('scroll', () => {
     })
 })
 
-// const blob = document.getElementById('blob');
-// document.body.onpointermove = event => {
-//     const { clientX, clientY } = event;
-
-//     blob.style.left = `${clientX}px`;
-//     blob.style.top = `${clientY}px`;
-// }
 
 const cursor = document.getElementById('blob')
 
 document.addEventListener('mousemove', (e) => {
     cursor.style.left = e.clientX + 'px';
     cursor.style.top = e.clientY  + 'px';
+})
+
+const containers = document.querySelectorAll('.project');
+let touchTimeout;
+
+// function handleTouchStart(e) {
+//     container.classList.add('pop');
+//     e.target.classList.add('pop');
+//     clearTimeout(touchTimeout);
+// }
+
+// function handleTouchEnd(e) {
+//     touchTimeout = setTimeout(() => {
+//         container.classList.remove('pop');
+//         items.forEach(item => item.classList.remove('pop'));
+//     }, 300);
+// }
+
+containers.forEach(container => {
+    console.log(container.classList)
+    if (container.querySelector('.pop') !== null) {
+        console.log('here');
+        console.log(container.querySelector('.pop'));
+        document.querySelector('.pop').classList.remove('pop');
+    }
+    const items = container.querySelectorAll('.project_right');
+    items.forEach(item => {
+        item.addEventListener('touchstart', e => {
+            container.classList.remove('pop');
+            items.forEach(item => item.classList.remove('pop'));
+            container.classList.add('pop');
+            item.classList.add('pop');
+        });
+    });
 })

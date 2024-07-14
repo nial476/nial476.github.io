@@ -184,7 +184,7 @@ a:hover .dash, .active .dash{
     /* z-index: 9999; */
 }
 
-.project:hover .project_right{
+.project:hover .project_right, .project.pop .project_right{
     filter: brightness(70%);
 }
 
@@ -198,7 +198,7 @@ a:hover .dash, .active .dash{
 }
 
 
-.project:hover .project_right:hover {
+.project:hover .project_right:hover, .project.pop .project_right.pop{
     filter: brightness(120%);
     transform: scale(1.1);
     z-index: 9999;
