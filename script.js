@@ -39,21 +39,25 @@ let touchTimeout;
 //         items.forEach(item => item.classList.remove('pop'));
 //     }, 300);
 // }
-
-containers.forEach(container => {
-    console.log(container.classList)
-    if (container.querySelector('.pop') !== null) {
-        console.log('here');
-        console.log(container.querySelector('.pop'));
-        document.querySelector('.pop').classList.remove('pop');
-    }
-    const items = container.querySelectorAll('.project_right');
-    items.forEach(item => {
-        item.addEventListener('touchstart', e => {
-            container.classList.remove('pop');
-            items.forEach(item => item.classList.remove('pop'));
-            container.classList.add('pop');
-            item.classList.add('pop');
+document.addEventListener('touchend', () => {
+    containers.forEach(container => {
+        if (document.querySelectorAll('.pop').length > 0) {
+            pop_items = document.querySelectorAll('.pop')
+            pop_items.forEach(pop_item => {
+                pop_item.classList.remove('pop')
+            })
+            console.log('first')
+        }
+        const items = container.querySelectorAll('.project_right');
+        items.forEach(item => {
+            item.addEventListener('touchstart', e => {
+                container.classList.remove('pop');
+                items.forEach(item => item.classList.remove('pop'));
+                container.classList.add('pop');
+                item.classList.add('pop');
+                console.log('here')
+            });
         });
     });
+    
 })
