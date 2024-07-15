@@ -33,7 +33,7 @@ document.addEventListener('touchend', () => {
             pop_items.forEach(pop_item => {
                 pop_item.classList.remove('pop')
             })
-            console.log('first')
+            // console.log('first')
         }
         const items = container.querySelectorAll('.touch_right');
         items.forEach(item => {
@@ -42,7 +42,7 @@ document.addEventListener('touchend', () => {
                 items.forEach(item => item.classList.remove('pop'));
                 container.classList.add('pop');
                 item.classList.add('pop');
-                console.log('here')
+                // console.log('here')
             });
         });
     });

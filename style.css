@@ -77,6 +77,10 @@ p a {
     margin-left: 20px;
 }
 
+.info_links {
+    display: inline-block;
+}
+
 #name {
     padding-bottom: 20px;
     letter-spacing: 3px;
@@ -212,6 +216,19 @@ section {
 #Experience .project .project_right {
     display: flex;
 }
+
+.duration {
+    font-weight: 100;
+    font-size: smaller;
+    align-items: center;
+    width: 150px;
+}
+
+.exp_details .project_name {
+    padding: 0;
+}
+
+
 
 /* Skills Section */
 .project_name, .skill_os {
