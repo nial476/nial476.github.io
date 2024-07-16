@@ -78,7 +78,7 @@ p a {
 }
 
 .info_links {
-    display: inline;
+    display: inline-block;
 }
 
 #name {
@@ -188,7 +188,7 @@ a:hover .dash, .active .dash{
     /* z-index: 9999; */
 }
 
-.project:hover .project_right{
+.project:hover .project_right, .touch.pop .touch_right{
     filter: brightness(70%);
 }
 
@@ -202,7 +202,7 @@ a:hover .dash, .active .dash{
 }
 
 
-.project:hover .project_right:hover {
+.project:hover .project_right:hover, .touch.pop .touch_right.pop{
     filter: brightness(120%);
     transform: scale(1.1);
     z-index: 9999;
@@ -219,10 +219,13 @@ section {
 
 .duration {
     font-weight: 100;
-    font-size: 12px;
-    justify-content: center;
-    width: 100px;
-    padding-right: 10px;
+    font-size: smaller;
+    align-items: center;
+    width: 150px;
+}
+
+.exp_details .project_name {
+    padding: 0;
 }
 
 
